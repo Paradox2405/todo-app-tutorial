@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "746726792368",
+    "project_id": "funactivity-5ac51",
+    "storage_bucket": "funactivity-5ac51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746726792368:android:239364c466b23fd480af75",
+        "android_client_info": {
+          "package_name": "com.example.flutter_to_do_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrNWQEiJzUQrV5sDZqUntmFyfblcNOZ9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
