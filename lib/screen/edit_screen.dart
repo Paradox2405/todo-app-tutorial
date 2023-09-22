@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
-import 'package:flutter_to_do_list/data/firestor.dart';
+import 'package:flutter_to_do_list/data/firestore_operations.dart';
 import 'package:flutter_to_do_list/model/notes_model.dart';
 
 class Edit_Screen extends StatefulWidget {

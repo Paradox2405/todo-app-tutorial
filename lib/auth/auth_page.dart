@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_to_do_list/screen/SingUP.dart';
+import 'package:flutter_to_do_list/screen/sign_up.dart';
 import 'package:flutter_to_do_list/screen/login.dart';
 
 class Auth_Page extends StatefulWidget {

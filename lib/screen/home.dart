@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
+import 'package:flutter_to_do_list/data/auth_data.dart';
 import 'package:flutter_to_do_list/screen/add_note_screen.dart';
 import 'package:flutter_to_do_list/widgets/stream_note.dart';
 
@@ -23,13 +25,14 @@ class _Home_ScreenState extends State<Home_Screen> {
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Add_creen(),
+              builder: (context) => Add_Screen(),
             ));
           },
           backgroundColor: custom_green,
           child: Icon(Icons.add, size: 30),
         ),
       ),
+      appBar: AppBar(title: Text("To-Do App"),backgroundColor: custom_green, actions: [IconButton(onPressed: ()=>AuthenticationRemote().logoutUser(),  icon: Icon(Icons.logout))]),
       body: SafeArea(
         child: NotificationListener<UserScrollNotification>(
           onNotification: (notification) {
@@ -45,18 +48,23 @@ class _Home_ScreenState extends State<Home_Screen> {
             }
             return true;
           },
-          child: Column(
-            children: [
-              Stream_note(false),
-              Text(
-                'isDone',
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey.shade500,
-                    fontWeight: FontWeight.bold),
-              ),
-              Stream_note(true),
-            ],
+          child: SingleChildScrollView(
+         //   physics: NeverScrollableScrollPhysics(),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Stream_note(false),
+                SizedBox(height: 10,),
+                Text(
+                  'isDone',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey.shade500,
+                      fontWeight: FontWeight.bold),
+                ),
+                Stream_note(true),
+              ],
+            ),
           ),
         ),
       ),

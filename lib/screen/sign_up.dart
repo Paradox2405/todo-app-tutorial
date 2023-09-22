@@ -43,7 +43,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           child: Column(
             children: [
               SizedBox(height: 20),
-              image(),
+              Image(),
               SizedBox(height: 50),
               textfield(email, _focusNode1, 'Email', Icons.email),
               SizedBox(height: 10),
@@ -52,9 +52,9 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
               textfield(PasswordConfirm, _focusNode3, 'PasswordConfirm',
                   Icons.password),
               SizedBox(height: 8),
-              account(),
+              Account(),
               SizedBox(height: 20),
-              SignUP_bottom(),
+              SignUp_bottom(),
             ],
           ),
         ),
@@ -62,7 +62,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
-  Widget account() {
+  Widget Account() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
@@ -88,7 +88,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
-  Widget SignUP_bottom() {
+  Widget SignUp_bottom() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: GestureDetector(
@@ -157,7 +157,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
-  Widget image() {
+  Widget Image() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(

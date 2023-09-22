@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
-import 'package:flutter_to_do_list/data/firestor.dart';
+import 'package:flutter_to_do_list/data/firestore_operations.dart';
 import 'package:flutter_to_do_list/model/notes_model.dart';
 import 'package:flutter_to_do_list/screen/edit_screen.dart';
 
 class Task_Widget extends StatefulWidget {
-  Note _note;
+  final Note _note;
   Task_Widget(this._note, {super.key});
 
   @override
@@ -108,7 +108,7 @@ class _Task_WidgetState extends State<Task_Widget> {
               child: Row(
                 children: [
                   Image.asset('images/icon_time.png'),
-                  SizedBox(width: 10),
+                  Expanded(child: SizedBox(width: 10)),
                   Text(
                     widget._note.time,
                     style: TextStyle(
